@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Dekko|Lato:900|Rock+Salt");
+*
+{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Dekko", cursive;
+}
+body
+{
+    /* background: linear-gradient(114.63566718435993deg, rgba(47, 128, 140,1) 5.736111111111111%,rgba(99, 36, 126,1) 96.29166666666666%) no-repeat center center fixed; */
+    background: linear-gradient(0deg, rgba(234, 0, 255, 0.3), rgba(234, 0, 255, 0.3)), url('1.jpg');
+    /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+
+  -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+
+  color: white;
+}
+
+
+ul{
+    padding: 10px 10px 0 0;
+}
+
+ul li a {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px !important;
+}
+
+ul li .btn{
+    padding: 2px 13px 2px 13px ;
+    border-radius: 50% !important;
+}
+
+
+.btn
+{
+    border: 1px solid white !important;
+    color: white !important;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+h1{
+    font-size: 45px !important;
+    text-shadow: -4px 5px black;
+}
+
+h3{
+    font-size: 30px !important;
+}
+
+.text
+{
+    padding-top: 150px ;
+    padding-bottom: 30px;
+}
+
+.form-group
+{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 20px;
+}
+
+.form-group label{
+    color:blue;
+}
+
+.form-control
+{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+}
+
+
+.button
+{
+    margin-top: 25px;
+}
+
+
+@media (max-width:768px)
+{
+    .text
+    {
+        padding-top: 50px ;
+    }
+    
+    ul li a {
+        font-size: 24px !important;
+    }
+
+    ul li .btn{
+        padding: 2px 12px 2px 12px !important;
+    }
+}
+
+

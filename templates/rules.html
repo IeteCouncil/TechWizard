@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../static/rules.css">
+
+</head>
+<body>
+
+<!-- partial:index.partial.html -->
+<div class="rules">
+  
+<!--****************
+Centered Title
+Tags used:
+      <center>
+      <h1>
+*****************-->
+<center>
+  <h1>
+    <b>
+      Rulebooks and Guidelines
+    </b>
+  </h1>
+</center>
+
+<!--****************
+Welcome Text
+Tags used:
+      <p>    | Paragraph Tag.
+      <a>    | Link Tag. 
+      <i>    | Italics.
+      <br>   | Breaks up text.
+*****************-->
+<p>
+  TechWizard, a unique all-online event that is both technical and entertaining at the same time! It will test your general IQ as well your implementation skills! Teams that are participating will go up against each other to reach the final location of the quest, the clock constantly ticking and a moment’s delay can lose the crown of the absolute winner! 
+  
+  <br>
+    <!--BREAK-->
+  <br> 
+
+  At each stage, users will be directed to a pdf where they will be prompted to enter specific details to continue with the stage challenges. There is a set time-limit (i.e. 2-3 hours) that the users cannot violate. If the team manages to finish the quest within allotted time, it will be recorded and compared with other teams. 
+  
+  <br>
+  <!--BREAK-->
+  <br> 
+
+Upon filling the  
+  
+  “<a href="https://forms.gle/XLczUo73rarS6Vii8" class="ewlink" target="_blank"><i><u>Google Form</u></i></a>” 
+  
+  you agree to following these rules/guidelines and start the game. As soon you fill this form, your countdown will begin. We also reserve the right to remove you from our website without warning and/or reason, however, a reason will generally be provided and you may ask for one if you are concerned.
+  
+  
+  <br>
+    <!--BREAK-->
+  <br>
+  
+  <span style="color: chartreuse;">So, ready to jump a chance to race against time and defeat Mogambo with his evil plan? </span>
+</p>
+  
+  
+
+
+<!--****************
+Sectional Paragraphs
+Tags used:
+      <ul>    | Unordered List.
+      <li>    | List Item. 
+      <input> | Input box.
+      <h2>    | Heading size 2.
+      <p>     | Paragraph Tag.
+      <br>    | Break.
+*****************-->
+<ul>
+  <li>
+    <input type="checkbox" checked>
+    
+    <i></i>
+    <h2>General Rulebooks</h2>
+    <p>
+      <br> • Maximum 2 hours will be allotted to each team.
+      <br> • Teams can participate from laptop or mobile phone as well. 
+      <br> • Teams must have minimum 2 players but not more than 4 members.
+      <br> • In case of tie, we will have a supplementary round.
+      <br> • Team members can communicate over any platform. (your choice) 
+      <br> • In case of any cheating, disrupting other team's progress, you will be immediately disqualified!
+      <br> • For any further help, contact Shreyasi: 9619242289, Raj: 9930153465
+    </p>
+  </li>
+  
+  <li>
+    <input type="checkbox" checked>
+    <i></i>
+    <h2>Forum Guidelines</h2>
+    <p>
+      <br> • Hints are provided at the top right corner for few stages.
+     <br> • The member who fills the start google form, should be the only member to fill the ending google form.
+     <br> • It is advisable that any one of the team member enters the key!
+     <br> • <span style="color: lightskyblue;">It is compulsory to Fill the google form at the beginning and at the end.</span> 
+     <br> • <span style="color:lightskyblue">The winner will be decided solely on the time duration taken to complete the hunt.</span>
+    </p>
+    <br>
+  </li>
+  
+</ul>
+</div>
+<!-- partial -->
+<br>
+<form action="{{ url_for('index') }}" method="POST">
+  <img src="../static/vs.png" class="img-fluid" alt=""><br>
+
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck" required>
+      <label class="form-check-label" for="gridCheck">
+        I accept all rules and regulations
+      </label>
+    </div>
+  </div>
+  <button type="submit">Start</button>
+</form>
+
+
+</body>
+</html>

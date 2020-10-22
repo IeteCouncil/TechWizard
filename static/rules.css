@@ -1,0 +1,230 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+@import url("https://fonts.googleapis.com/css?family=Dekko|Lato:900|Rock+Salt");
+.transition, p, ul li i:before, ul li i:after {
+  transition: all 0.25s ease-in-out;
+}
+
+.flipIn, h1, ul li {
+  animation: flipdown 0.5s ease both;
+}
+
+.no-select, h2 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  perspective: 900;
+  overflow-y: scroll;
+  background-color: white;
+  color: #cf4f4f;
+  font-family: "Dekko", cursive;
+}
+
+body {
+  min-height: 0;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  margin: 90px 0;
+  transform: translate(-50%, 0);
+  box-shadow: 0 10px 0 0 #ff6873 inset;
+  background-color: #1a191a;
+  max-width: 60%;
+  padding: 30px;
+}
+@media (max-width: 550px) {
+  body {
+    box-sizing: border-box;
+    transform: translate(0, 0);
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    left: 0;
+  }
+}
+
+.rules h1, h2 {
+  color: #cf4f4f;
+}
+
+.rules h1 {
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+
+.rules h2 {
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+  /* background-color: #1a191a; */
+  margin: 0;
+  cursor: pointer;
+}
+.rules p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  max-height: 1200px;
+  opacity: 1;
+  transform: translate(0, 0);
+  margin-top: 14px;
+  z-index: 2;
+}
+
+.rules ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
+}
+.rules ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 4px;
+  padding-top: 18px;
+  border-top: 1px solid #cf4f4f;
+}
+.rules ul li:nth-of-type(1) {
+  animation-delay: 0.5s;
+}
+.rules ul li:nth-of-type(2) {
+  animation-delay: 0.75s;
+}
+.rules ul li:nth-of-type(3) {
+  animation-delay: 1s;
+}
+.rules ul li:last-of-type {
+  padding-bottom: 0;
+}
+.rules ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 16px;
+  right: 0;
+}
+.rules ul li i:before, ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: #cf4f4f;
+  width: 3px;
+  height: 9px;
+}
+.rules ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+.rules ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+.rules ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+}
+.rules ul li input[type=checkbox]:checked ~ p {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+.rules ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.rules ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+  5% {
+    opacity: 1;
+  }
+  80% {
+    transform: rotateX(8deg);
+  }
+  83% {
+    transform: rotateX(6deg);
+  }
+  92% {
+    transform: rotateX(-3deg);
+  }
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+}
+
+.ewlink {
+  text-decoration: none;
+  color: #ff6873;
+}
+
+
+form label{
+  font-size: 22px;
+  color: chartreuse;
+}
+
+form button{
+  font-size: 22px;
+  margin-top: 20px;
+  background-color: white;
+  color: black;
+  font-family: "Dekko", cursive;
+  border: 2px solid chartreuse;
+  padding: 2px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+form img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form img{
+  animation: shake 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
